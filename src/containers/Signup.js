@@ -13,6 +13,7 @@ import { s3Upload } from "../libs/awsLib";
 import { parserCNH} from "../libs/awsLib";
 import FacebookButton from "../components/FacebookButton";
 import AWS from "aws-sdk";
+import AWSCognito from "aws-sdk";
 
 // Function that returns the file content as base64
 function getBase64(file) {
@@ -51,11 +52,30 @@ async function DetectText(imageData, email, password, callback) {
 
 //Provides anonymous log on to AWS services
 function AnonLog() {  
+  AWSCognito.config.update({accessKeyId: 'AKIATW57H27RU26TJFF2', secretAccessKey: 'anyYpfQCXasLXwhWjE5pnObkTp4RAAUKkWWXmfH1dfwthing'})
+  AWS.config.update({accessKeyId: 'AKIATW57H27RU26TJFF2', secretAccessKey: 'anyYpfQCXasLXwhWjE5pnObkTp4RAAUKkWWXmfH1dfwthing'})
+
+var poolData = { 
+    UserPoolId : config.cognito.USER_POOL_ID,
+    ClientId : config.cognito.APP_CLIENT_ID
+};
+
+AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+  IdentityPoolId: "MyPoolID",
+  RoleArn: "MyARN"
+});
+
+
   // Configure the credentials provider to use your identity pool
   AWS.config.region = config.cognito.REGION; // Region
   AWS.config.credentials = new AWS.CognitoIdentityCredentials({
     IdentityPoolId: config.cognito.IDENTITY_POOL_ID,
   });
+
+  AWSCognito.config.region = 'us-east-1';
+AWSCognito.config.credentials = new AWS.CognitoIdentityCredentials({
+    IdentityPoolId: config.cognito.IDENTITY_POOL_ID 
+});
 }
 
 export default class Signup extends Component {
