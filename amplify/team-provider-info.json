@@ -9,6 +9,62 @@
       "UnauthRoleName": "octank-ml-auth-20190418161641-unauthRole",
       "StackName": "octank-ml-auth-20190418161641",
       "StackId": "arn:aws:cloudformation:us-east-1:987367854699:stack/octank-ml-auth-20190418161641/821a59e0-620e-11e9-a8a0-12d954a12b14"
+    },
+    "categories": {
+      "auth": {
+        "octank_ml_auth889ddbc7": {
+          "userPoolId": "us-east-1_oDI6ApOko",
+          "userPoolName": "test6up",
+          "webClientId": "37cb136tceft505ppft852gvh9",
+          "nativeClientId": "hct6357ldr8vv599ml5iogu6n",
+          "identityPoolId": "us-east-1:76824bd6-2b0c-4280-b1e2-726a0ddc04c9",
+          "identityPoolName": "test8",
+          "allowUnauthenticatedIdentities": true,
+          "authRoleArn": "arn:aws:iam::255414753251:role/Cognito_test8Auth_Role",
+          "authRoleName": "Cognito_test8Auth_Role",
+          "unauthRoleArn": "arn:aws:iam::255414753251:role/Cognito_test8Unauth_Role",
+          "unauthRoleName": "Cognito_test8Unauth_Role"
+        }
+      }
+    }
+  },
+  "devooo": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-octank-ml-auth-devooo-213931-authRole",
+      "UnauthRoleArn": "arn:aws:iam::255414753251:role/amplify-octank-ml-auth-devooo-213931-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::255414753251:role/amplify-octank-ml-auth-devooo-213931-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-octank-ml-auth-devooo-213931-deployment",
+      "UnauthRoleName": "amplify-octank-ml-auth-devooo-213931-unauthRole",
+      "StackName": "amplify-octank-ml-auth-devooo-213931",
+      "StackId": "arn:aws:cloudformation:us-east-1:255414753251:stack/amplify-octank-ml-auth-devooo-213931/8f6d83f0-5eb6-11eb-9872-1264a8f6165d",
+      "AmplifyAppId": "d1x91de9tzdcjt"
+    },
+    "categories": {
+      "auth": {
+        "octank_ml_auth889ddbc7": {
+          "userPoolId": "us-east-1_oDI6ApOko",
+          "userPoolName": "test6up",
+          "webClientId": "37cb136tceft505ppft852gvh9",
+          "nativeClientId": "hct6357ldr8vv599ml5iogu6n",
+          "identityPoolId": "us-east-1:76824bd6-2b0c-4280-b1e2-726a0ddc04c9",
+          "identityPoolName": "test8",
+          "allowUnauthenticatedIdentities": true,
+          "authRoleArn": "arn:aws:iam::255414753251:role/Cognito_test8Auth_Role",
+          "authRoleName": "Cognito_test8Auth_Role",
+          "unauthRoleArn": "arn:aws:iam::255414753251:role/Cognito_test8Unauth_Role",
+          "unauthRoleName": "Cognito_test8Unauth_Role"
+        }
+      },
+      "function": {
+        "detecttext": {}
+      },
+      "storage": {
+        "octank_ml_auth65cb8583": {
+          "bucketName": "test6sup",
+          "region": "us-east-1"
+        }
+      }
     }
   }
 }

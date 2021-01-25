@@ -1,0 +1,6 @@
+{
+  "authSelections": "identityPoolAndUserPool",
+  "resourceName": "octank_ml_auth889ddbc7",
+  "serviceType": "imported",
+  "region": "us-east-1"
+}
